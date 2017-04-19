@@ -1,0 +1,21 @@
+body {
+    background-color: #66ffcc;
+}
+
+h1 {
+    text-align: center;
+    color: #3333ff;  
+    font-family: Arial;
+    font-style: italic;
+}
+
+form {
+    text-align: center;
+    font-weight: bold;
+    line-height: 200%;
+}
+
+img {
+    height: 80px;
+    width: 120px;
+}

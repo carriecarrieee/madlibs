@@ -2,8 +2,10 @@
 <html>
 <head>
     <title>Game</title>
+    <link rel="stylesheet" href="/static/stylesheet.css">
 </head>
 <body>
+    <h1>Let's Play A Game!</h1>
     <form action="/madlibs" method="POST">
         Person: <input type="text" name="person"><br>
         Color: <select name="color">
@@ -17,10 +19,10 @@
         Vehicle: <input type="radio" name="vehicle" value="skateboard">Skateboard</input>
         <input type="radio" name="vehicle" value="bike">Bike</input>
         <input type="radio" name="vehicle" value="segway">Segway</input></br>
-        Animals: <input type="checkbox" name="animals" value="dogs">Dogs</input>
-        <input type="checkbox" name="animals" value="dolphins">Dolphins</input>
-        <input type="checkbox" name="animals" value="elephants">Elephants</input>
-        <input type="checkbox" name="animals" value="whales">Whales</input><br>
+        Animals: <input class="animalImage" type="checkbox" name="animals" value="dogs"><img src="/static/dog.jpg"></input>
+        <input class="animalImage" type="checkbox" name="animals" value="dolphins"><img src="/static/dolphin.jpg"></input>
+        <input class="animalImage" type="checkbox" name="animals" value="elephants"><img src="/static/elephant.jpg"></input>
+        <input class="animalImage" type="checkbox" name="animals" value="whales"><img src="/static/whale.jpg"></input><br>
         <input type="submit">
     </form>
 </body>
