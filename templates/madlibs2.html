@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+Make {{ color }} eye contact with {{ person }} from your {{ vehicle }} as if you were in a spying contest, and if they get {{ adjective }} and ask why you're staring at them, you say, let me fight you with my 
+{% if animals|length > 1 %}
+{% for animal in animals %} 
+{% if not loop.last %}
+    {{ animal }},
+{% else %}
+    and {{ animal }}.
+ {% endif %} 
+ {% endfor %}
+ {% else %}
+    {{ animals[0] }}.
+ {% endif %}
+
+{% endblock %}

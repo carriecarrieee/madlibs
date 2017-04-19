@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+When {{ person }} arrived on their {{ vehicle }}, it burst into flames in a totally {{ adjective }} way and all that was left were 
+{% if animals|length > 1 %}
+{% for animal in animals %} 
+{% if not loop.last %}
+    {{ animal }},
+{% else %}
+    and {{ animal }}.
+ {% endif %} 
+ {% endfor %}
+ {% else %}
+    {{ animals[0] }}.
+ {% endif %}
+{% endblock %}

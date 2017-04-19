@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>A Compliment</title>
+</head>
+<body>
+    Hi {{ person }}! I think you're 
+
+    {% if compliments|length > 1 %}
+    {% for compliment in compliments %} 
+    {% if not loop.last %}
+        {{ compliment }},
+    {% else %}
+        and {{ compliment }}.
+     {% endif %} 
+     {% endfor %}
+     {% else %}
+        {{ compliments[0] }}.
+     {% endif %}
+
+   <div>Would you like to play a game?</div>
+    <form action="/game">
+        <input type="radio" name="answer" value="yes">Yes</input>
+        <input type="radio" name="answer" value="no">No</input>
+        <input type="submit">
+    </form>
+</body>
+</html>
